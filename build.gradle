@@ -23,6 +23,7 @@ dependencies {
 
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'com.h2database:h2:1.4.193'
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server:3.0.3'
 
 
 }

@@ -9,10 +9,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 @EnableFeignClients
 @EnableConfigurationProperties(value = {RedisDetailsConfig.class})
-public class FirstProjectApplication {
+public class PollApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FirstProjectApplication.class, args);
+		SpringApplication.run(PollApplication.class, args);
 	}
 
 }

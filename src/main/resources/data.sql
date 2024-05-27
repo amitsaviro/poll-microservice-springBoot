@@ -1,21 +1,25 @@
-DROP TABLE IF EXISTS customer_order;
-DROP TABLE IF EXISTS customer;
 
-CREATE TABLE customer (
+DROP TABLE IF EXISTS poll;
+DROP TABLE IF EXISTS user_poll;
+
+CREATE TABLE poll (
     id int(11) unsigned NOT NULL AUTO_INCREMENT,
-    first_name varchar(300) NOT NULL DEFAULT '',
-    last_name varchar(300) NOT NULL DEFAULT '',
-    email varchar(300) NOT NULL DEFAULT '',
-    status varchar(300) NOT NULL DEFAULT 'REGULAR',
+    title varchar(300) NOT NULL DEFAULT '',
+    first_answer varchar(300) NOT NULL DEFAULT '',
+    second_answer varchar(300) NOT NULL DEFAULT '',
+    third_answer varchar(300) NOT NULL DEFAULT '',
+    fourth_answer varchar(300) NOT NULL DEFAULT '',
     PRIMARY KEY (id)
 );
-
-CREATE TABLE customer_order (
+CREATE TABLE user_poll (
     id int(11) unsigned NOT NULL AUTO_INCREMENT,
-    customer_id int(11) NOT NULL,
-    item_name varchar(300) NOT NULL DEFAULT '',
-    price int(11) NOT NULL DEFAULT '',
+    user_id BIGINT(11) NOT NULL,
+    poll_id BIGINT(11) NOT NULL,
+    answer varchar(300) NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (customer_id) REFERENCES customer(id)
+    FOREIGN KEY (poll_id) REFERENCES poll (id)
 );
+
+
+
 
