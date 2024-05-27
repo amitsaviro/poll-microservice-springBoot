@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8090
 
 spring:
   datasource:
@@ -12,12 +12,17 @@ spring:
   h2:
     console:
       enabled: true
-
+  application:
+    name: first-project-application
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
 
 redis:
   host: localhost
   port: 6379
-  ttl: 5
+  ttl: 60
 
-tvmaze:
-  url: https://api.tvmaze.com
+userUrl:
+  url: http://localhost:8080
